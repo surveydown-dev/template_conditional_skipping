@@ -29,7 +29,7 @@ required-questions:
 library(surveydown)
 ```
 
-::: {.sd_page id=welcome}
+--- welcome
 
 # Template - Conditional Skipping
 
@@ -46,9 +46,7 @@ Please proceed to the next page.
 sd_next()
 ```
 
-:::
-
-::: {.sd_page id=basic_skipping}
+--- basic_skipping
 
 ## 1. Simple skipping
  
@@ -70,9 +68,7 @@ sd_question(
 sd_next()
 ```
 
-:::
-
-::: {.sd_page id=complex_skipping}
+--- complex_skipping
 
 ## 2. Complex skipping
  
@@ -102,9 +98,7 @@ sd_question(
 sd_next()
 ```
 
-:::
-
-::: {.sd_page id=end}
+--- end
 
 ## End page
 
@@ -114,9 +108,7 @@ This is the normal end page for respondents who **do not** get screened out.
 sd_close()
 ```
 
-:::
-
-::: {.sd_page id=screenout}
+--- screenout
 
 ## Screenout page
 
@@ -125,5 +117,3 @@ This is the **screenout page** for respondents who were sent to the screenout pa
 ```{r}
 sd_close()
 ```
-
-:::
