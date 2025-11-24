@@ -1,28 +1,27 @@
 ---
-# General Settings
-format: html
-echo: false
-warning: false
+# The YAML header specifies several settings for the survey but is not required.
+# A full list of settings can be found under _survey/settings.yml directory.
 
-# Theme Settings
-theme: default
-barposition: top
-footer-left: "Made with [surveydown](https://surveydown.org)"
-footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_conditional_skipping)'
+theme-settings:
+  theme: default
+  barposition: top
+  footer-left: "Made with [surveydown](https://surveydown.org)"
+  footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_conditional_skipping)'
 
-# Survey Settings
-use-cookies: false
-auto-scroll: false
-rate-survey: false
-system-language: en
-highlight-unanswered: true
-highlight-color: blue
-capture-metadata: true
-all-questions-required: false
-required-questions:
-  - vehicle_simple
-  - vehicle_complex
-  - buy_vehicle
+survey-settings:
+  show-previous: false
+  use-cookies: false
+  auto-scroll: false
+  rate-survey: false
+  system-language: en
+  highlight-unanswered: true
+  highlight-color: blue
+  capture-metadata: true
+  all-questions-required: false
+  required-questions:
+    - vehicle_simple
+    - vehicle_complex
+    - buy_vehicle
 ---
 
 ```{r}
@@ -42,10 +41,6 @@ It consists of:
 
 Please proceed to the next page.
 
-```{r}
-sd_next()
-```
-
 --- basic_skipping
 
 ## 1. Simple skipping
@@ -64,8 +59,6 @@ sd_question(
     'No'  = 'no'
   )
 )
-
-sd_next()
 ```
 
 --- complex_skipping
@@ -94,8 +87,6 @@ sd_question(
     'No'  = 'no'
   )
 )
-
-sd_next()
 ```
 
 --- end

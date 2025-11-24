@@ -11,3 +11,5 @@ rsconnect
 _survey
 survey_files
 survey.html
+
+/.luarc.json
