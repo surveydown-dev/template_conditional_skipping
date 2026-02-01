@@ -37,10 +37,8 @@ ui <- sd_ui()
 server <- function(input, output, session) {
   # Define any conditional skipping logic here (skip to page if a condition is true)
   sd_skip_if(
-    input$vehicle_simple == "no" ~ "screenout",
-    input$vehicle_complex == "no" &
-      input$buy_vehicle == "no" ~
-      "screenout"
+    sd_value(vehicle_simple) == "no" ~ "screenout",
+    all(sd_value(vehicle_complex, buy_vehicle) == c("no", "no")) ~ "screenout"
   )
 
   # Run surveydown server and define database
